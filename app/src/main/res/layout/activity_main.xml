@@ -20,7 +20,7 @@
 
 
         <TextView
-                android:text="Result"
+                android:text=""
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="131dp"
@@ -28,65 +28,48 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_vertical"
-                android:background="#F8F6F6"
-                android:textColor="#212121"/>
+                android:background="#4A4545"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:gravity="center"/>
 
         <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="280dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="285dp"
+                android:layout_marginBottom="0dp"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_vertical"
-                >
+                android:gravity="center_vertical">
 
             <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                 <Button
-                        android:text="1"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button1"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"
-                        />
+                        android:text="@string/one"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="2"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button2"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/two"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="3"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button3"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/three"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="+"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button4"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/plus"
+                        style="@style/button"
+                />
             </TableRow>
 
             <TableRow
@@ -94,44 +77,28 @@
                     android:layout_height="match_parent">
 
                 <Button
-                        android:text="4"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button5"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/four"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="5"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button6"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/five"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="6"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button7"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/six"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="-"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button8"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/minus"
+                        style="@style/button"
+                />
             </TableRow>
 
             <TableRow
@@ -139,44 +106,28 @@
                     android:layout_height="match_parent">
 
                 <Button
-                        android:text="7"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button9"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/seven"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="8"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button10"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/eight"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="9"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button11"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/nine"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="*"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button12"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/multiply"
+                        style="@style/button"
+                />
             </TableRow>
 
             <TableRow
@@ -184,44 +135,54 @@
                     android:layout_height="match_parent">
 
                 <Button
-                        android:text="C"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button13"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/period"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="0"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button14"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/zero"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="."
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button15"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/plusminus"
+                        style="@style/button"
+                />
 
                 <Button
-                        android:text="/"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="11dp"
                         android:id="@+id/button16"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:textColor="#D500F9"
-                        android:onClick="handleClick"/>
+                        android:text="@string/divide"
+                        style="@style/button"
+                />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="center_horizontal">
+
+            <TableRow android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                <Button
+                        android:id="@+id/button17"
+                        android:text="@string/reset"
+                        style="@style/button"
+                        android:layout_width="140dp"
+                />
+                <Button
+                        android:id="@+id/button18"
+                        android:text="@string/equals"
+                        style="@style/button"
+                        android:layout_width="140dp"
+                />
             </TableRow>
         </TableLayout>
     </LinearLayout>

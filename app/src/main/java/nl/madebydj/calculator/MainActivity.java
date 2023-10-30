@@ -1,6 +1,5 @@
 package nl.madebydj.calculator;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -9,8 +8,9 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    Integer value1 = 0, value2 = 0;
-    String operator = "", output = "";
+    Numbers numbers = new Numbers("", "");
+    Helpers helpers = new Helpers("", false, false,true,false, false,false, true,false);
+    String output = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +22,36 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) view;
         String input = button.getText().toString();
 
-        if (input.matches(".*\\d.*") && operator.equals("")) {
-            output = output + input;
-            value1 = value1 + Integer.valueOf(input);
-        } else if (!input.matches(".*\\d.*") && !value1.equals(0) && operator.equals("")) {
-            output = output + input;
-            operator = input;
-        } else if (input.matches(".*\\d.*") && !value1.equals(0) && !operator.equals("")) {
-            output = output + input;
-            value2 = value2 + Integer.valueOf(input);
+        if (input.matches(".*\\d.*") && !helpers.getValue1() && !helpers.getIsEqual()) {
+
+            output = helpers.handleValue(true, input, numbers);
+
+        } else if (input.equals("+/-") && !helpers.getIsEqual()) {
+
+            output = helpers.handlePlusMinus(numbers);
+
+        } else if (input.equals(".") && !helpers.getIsEqual()) {
+
+            output = helpers.handlePeriod(numbers, input);
+
+        } else if ((input.equals("+") || input.equals("-") || input.equals("*") || input.equals("/")) && !helpers.getValue1() && !helpers.getIsEqual()) {
+
+            output = helpers.handleOperator(input, numbers);
+
+        } else if (input.matches(".*\\d.*") && helpers.getIsOperator() && !helpers.getValue2() && !helpers.getIsEqual()) {
+
+            output = helpers.handleValue(false, input, numbers);
+
+        } else if (input.equals("=") && !helpers.getValue2() && !helpers.getIsEqual()) {
+
+            output = numbers.calculate(helpers.getOperator(), numbers);
+            helpers.setValue2(true);
+            helpers.setIsEqual(true);
+
+        } else if (input.equals("C")) {
+            helpers.reset(numbers);
+            output = "";
         }
         ((TextView) findViewById(R.id.textView)).setText(output);
-        //Log.d("testid", value1);
     }
 }
